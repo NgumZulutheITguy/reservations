@@ -42,11 +42,11 @@ class ImageCard extends StatelessWidget {
                Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => BookingPage(),
+          builder: (context) => const BookingPage(),
         ),
       );
               },
-              child: Text(
+              child: const Text(
                 'Book Now',
                 style: TextStyle(
                   color: Colors.white, // Change the text color as needed
@@ -55,7 +55,7 @@ class ImageCard extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
+        const Positioned(
           bottom: 100,
           left: 30,
           child: Text(

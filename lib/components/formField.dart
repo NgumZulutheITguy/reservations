@@ -35,15 +35,15 @@ class MyFormField extends StatelessWidget {
             }).toList(),
             decoration: InputDecoration(
               labelText: hintText,
-              border: OutlineInputBorder(),
+              border: const OutlineInputBorder(),
             ),
           ),
-          SizedBox(height: 10), // Add spacing between dropdown and text field
+          const SizedBox(height: 10), // Add spacing between dropdown and text field
 
 
           TextField(
             obscureText: obscureText,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                   color: Colors.white,

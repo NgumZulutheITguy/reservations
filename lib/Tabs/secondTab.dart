@@ -23,7 +23,7 @@ class _SecondTabState extends State<SecondTab> {
       
       body: MasonryGridView.builder(
           itemCount: 7, 
-  gridDelegate: SliverSimpleGridDelegateWithFixedCrossAxisCount(
+  gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(
     crossAxisCount: 2,
   ),
   itemBuilder: (context, index) => GestureDetector(
@@ -32,7 +32,7 @@ class _SecondTabState extends State<SecondTab> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => BookingPage(),
+          builder: (context) => const BookingPage(),
         ),
       );
     },

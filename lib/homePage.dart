@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
             toolbarHeight: 130,
             backgroundColor: Colors.transparent,
             elevation: 0,
-            title: Text('Explore\nOur collections',
+            title: const Text('Explore\nOur collections',
             style: TextStyle(
               color: Colors.black,
               fontSize: 30,
@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           extendBody: true,
-          body: Column(
+          body: const Column(
             children: [
             TabBar(
               tabs: [

@@ -6,6 +6,6 @@ class FirstTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ImageCard(imagePath: 'lib/images/image3.jpg',);
+    return const ImageCard(imagePath: 'lib/images/image3.jpg',);
   }
 }

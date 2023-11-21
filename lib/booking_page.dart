@@ -55,7 +55,7 @@ class _BookingPageState extends State<BookingPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Booking Confirmation'),
+            title: const Text('Booking Confirmation'),
             content: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
@@ -70,7 +70,7 @@ class _BookingPageState extends State<BookingPage> {
                 onPressed: () {
                   Navigator.of(context).pop(); // Close the dialog
                 },
-                child: Text('OK'),
+                child: const Text('OK'),
               ),
             ],
           );
@@ -82,14 +82,14 @@ class _BookingPageState extends State<BookingPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Error'),
-            content: Text('Please fill in all required fields.'),
+            title: const Text('Error'),
+            content: const Text('Please fill in all required fields.'),
             actions: [
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pop(); // Close the dialog
                 },
-                child: Text('OK'),
+                child: const Text('OK'),
               ),
             ],
           );
@@ -107,11 +107,11 @@ class _BookingPageState extends State<BookingPage> {
           // Logo
           const SizedBox(height: 10),
 
-          Text('Photoshoot Packages'),
+          const Text('Photoshoot Packages'),
           MyFormField(
             hintText: 'Choose an option',
             obscureText: false,
-            dropdownItems: ['Option 1', 'Option 2', 'Option 3'],
+            dropdownItems: const ['Option 1', 'Option 2', 'Option 3'],
             selectedValue: selectedValue,
             onChanged: (String? value) {
               setState(() {
@@ -124,12 +124,13 @@ class _BookingPageState extends State<BookingPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+              SizedBox(
                 width: 150, // Adjust the width as per your preference
                 child: MaterialButton(
                   onPressed: _showDatePicker,
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
+                  color: Colors.indigo,
+                  child: const Padding(
+                    padding: EdgeInsets.all(20.0),
                     child: Text(
                       'Choose Date',
                       style: TextStyle(
@@ -138,20 +139,20 @@ class _BookingPageState extends State<BookingPage> {
                       ),
                     ),
                   ),
-                  color: Colors.indigo,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               // Time button
 
-              Container(
+              SizedBox(
                 width: 150, // Adjust the width as per your preference
                 child: MaterialButton(
                   onPressed: _showTimePicker,
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
+                  color: Colors.indigo,
+                  child: const Padding(
+                    padding: EdgeInsets.all(20.0),
                     child: Text(
                       'Choose Time',
                       style: TextStyle(
@@ -160,12 +161,11 @@ class _BookingPageState extends State<BookingPage> {
                       ),
                     ),
                   ),
-                  color: Colors.indigo,
                 ),
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           MyButton(
